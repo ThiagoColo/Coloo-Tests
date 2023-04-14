@@ -21,9 +21,43 @@
 				opacity: 0;
 			}
 		}
+
+		#image {
+			position: absolute;
+			display: none;
+			animation: moveimage 0.1s linear infinite;
+		}
+
+		@keyframes moveimage {
+			from {
+				top: 0;
+				left: 0;
+			}
+			to {
+				top: 100%;
+				left: 100%;
+			}
+		}
 	</style>
 </head>
 <body>
+	<img id="image" src="myimage.png" alt="Random image" />
 	URI BOT
+	<script>
+		const image = document.getElementById("image");
+		const body = document.getElementsByTagName("body")[0];
+
+		const windowHeight = window.innerHeight;
+		const windowWidth = window.innerWidth;
+
+		setInterval(function() {
+			image.style.top = Math.floor(Math.random() * windowHeight) + "px";
+			image.style.left = Math.floor(Math.random() * windowWidth) + "px";
+			image.style.display = "block";
+			setTimeout(function() {
+				image.style.display = "none";
+			}, 100);
+		}, 200);
+	</script>
 </body>
 </html>
