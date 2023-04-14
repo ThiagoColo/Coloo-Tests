@@ -25,7 +25,7 @@
 		#image {
 			position: absolute;
 			display: none;
-			animation: moveimage 5s linear infinite;
+			animation: moveimage 0.1s linear infinite;
 			max-width: 30%;
 			height: 30%;
 		}
@@ -36,8 +36,9 @@
 				left: 0;
 			}
 			to {
-				top: calc(100% - 30%);
-				left: calc(100% - 30%);
+				top: 100%;
+				left: 100%;
+				opacity: 0;
 			}
 		}
 	</style>
@@ -49,12 +50,14 @@
 		const image = document.getElementById("image");
 		const body = document.getElementsByTagName("body")[0];
 
-		const windowHeight = window.innerHeight;
-		const windowWidth = window.innerWidth;
-
 		setInterval(function() {
-			image.style.top = Math.floor(Math.random() * windowHeight) + "px";
-			image.style.left = Math.floor(Math.random() * windowWidth) + "px";
+			const windowHeight = window.innerHeight;
+			const windowWidth = window.innerWidth;
+			const randomX = Math.floor(Math.random() * windowWidth);
+			const randomY = Math.floor(Math.random() * windowHeight);
+
+			image.style.top = `${randomY}px`;
+			image.style.left = `${randomX}px`;
 			image.style.display = "block";
 			setTimeout(function() {
 				image.style.display = "none";
