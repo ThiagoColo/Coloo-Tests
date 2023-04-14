@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>URI BOT</title>
+	<style>
+		body {
+			background-color: #000;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 6em;
+			color: #ff0000;
+			animation: fadeinout 3s ease-in-out infinite;
+		}
+
+		@keyframes fadeinout {
+			50% {
+				opacity: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	URI BOT
+</body>
+</html>
