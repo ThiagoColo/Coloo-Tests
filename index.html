@@ -30,7 +30,7 @@
         left: 0;
         width: 100px;
         height: 100px;
-        background-image: url("https://th.bing.com/th/id/OIP.bJK-nnzwm6ACyQaamGyTnwHaHK?pid=ImgDet&rs=1");
+        background-image: url("https://th.bing.com/th/id/OIP.d0POMFdHsawVxoPXhdX4xAHaNK?pid=ImgDet&rs=1");
         background-repeat: no-repeat;
         background-size: cover;
         animation: move 5s infinite linear;
@@ -63,10 +63,41 @@
           transform: translate(0, 0);
         }
       }
+      
+      .button-container {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        animation: fadeinout 6s ease-in-out infinite;
+      }
+      
+      @keyframes fadeinout {
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+      }
+      
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #303030;
+        color: #bcbcbc;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 5px;
+      }
+      
+      .button:hover {
+        background-color: #bcbcbc;
+        color: #303030;
+      }
+      
     </style>
   </head>
   <body>
     <div class="center">URI BOT</div>
     <div class="image"></div>
+    <div class="button-container">
+      <a href="https://www.op.gg/summoners/las/AA%20Rhaegal" class="button">NO TE DIGO</a>
+    </div>
   </body>
 </html>
